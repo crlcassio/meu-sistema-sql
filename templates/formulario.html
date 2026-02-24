@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Sistema SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2563eb; --bg: #f3f4f6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 100%; max-width: 400px; }
+        h2 { color: #1f2937; margin-bottom: 1.5rem; text-align: center; }
+        .group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: #4b5563; }
+        input { width: 100%; padding: 0.8rem; border: 1.5px solid #d1d5db; border-radius: 8px; box-sizing: border-box; transition: 0.2s; }
+        input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        button { width: 100%; padding: 0.9rem; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; font-size: 1rem; }
+        button:hover { background: #1d4ed8; transform: translateY(-1px); }
+        .link { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; }
+        .link a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Novo Registro</h2>
+        <form action="/enviar" method="POST">
+            <div class="group">
+                <label>Nome Completo</label>
+                <input type="text" name="nome" placeholder="Digite o nome" required>
+            </div>
+            <div class="group">
+                <label>E-mail</label>
+                <input type="email" name="email" placeholder="exemplo@email.com" required>
+            </div>
+            <button type="submit">Salvar no Banco</button>
+        </form>
+        <div class="link">
+            <a href="/usuarios">Ver todos os registros →</a>
+        </div>
+    </div>
+</body>
+</html>
